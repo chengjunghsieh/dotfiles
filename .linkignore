@@ -1,0 +1,11 @@
+.linkignore
+.git
+.github
+.gitignore
+.stylua.toml
+.luacheckrc
+.cspell.json
+.circleci
+.vale.ini
+.luarc.json
+.nvim

@@ -1,0 +1,287 @@
+
+{
+    // "editor.fontSize": 14,
+    // "editor.letterSpacing": 0.3,
+    "editor.fontFamily": "JetbrainsMono Nerd Font",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.tabSize": 4,
+    "editor.lineNumbers": "on",
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "editor.renderWhitespace": "all",
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
+    "editor.fontLigatures": false,
+    // "editor.cursorStyle": "block",
+    "breadcrumbs.enabled": false,
+    "search.showLineNumbers": true,
+    // Controls if file decorations should use badges.
+    "explorer.decorations.badges": false,
+
+    //
+    //----------------- Terminal ------------------------
+    //
+    "terminal.external.osxExec": "iTerm2.app",
+    "terminal.integrated.letterSpacing": 0,
+    "terminal.integrated.fontFamily": "JebrainsMono Nerd Font",
+    "terminal.integrated.fontSize": 10,
+    "terminal.integrated.cwd": "${relativeFileDirname}",
+
+    //
+    //-------------------- Language Specific --------------------------
+    //
+    
+    //
+    // C++
+    //
+    "[cpp]": {
+      "editor.tabSize": 2,
+    },
+
+    //
+    // Ruby
+    //
+    "[ruby]": {
+      "editor.tabSize": 2,
+    },
+
+    //
+    // Javasscript
+    //
+    "[javascript]": {
+      "editor.tabSize": 2,
+    },
+
+    //
+    // Python
+    //
+    "python.formatting.provider": "black",
+
+    //
+    // Go
+    //
+    "[go]": {
+      "editor.insertSpaces": false,
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+      },
+      "editor.suggest.snippetsPreventQuickSuggestions": false
+    },
+    "gopls": {
+      // "formatting.local": <comma-separated imports prefix>
+      "formatting.gofumpt": true
+    },
+
+    // "workbench.fontAliasing": "antialiased",
+    "workbench.startupEditor": "none",
+    // "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": true,
+    // "workbench.panel.defaultLocation": "left",
+    "window.title": "${activeEditorLong}${separator}${rootName}",
+    "workbench.editor.focusRecentEditorAfterClose": false,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+
+    //
+    //--------------------Code Runner--------------------------
+    //
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "c": "cd $dir && clang $fileName -o $fileNameWithoutExt -Wall -O2 -I$CP_HOME/include -std=c11 -DUNOLIGHT && $dir$fileNameWithoutExt && rm -f tempCodeRunnerFilee.c tempCodeRunnerFile",
+        "cpp": "cd $dir && clang++ $fileName -o $fileNameWithoutExt -Wall -O2 -I$CP_HOME/include -Wno-unused-result -std=c++17 -DUNOLIGHT && $dir$fileNameWithoutExt && rm -f tempCodeRunnerFile.cpp tempCodeRunnerFile",
+        "python": "cd $dir && python $fileName",
+    },
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.preserveFocus": true,
+    "code-runner.clearPreviousOutput": false,
+
+    "zenMode.centerLayout": false,
+    "zenMode.hideTabs": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.iconTheme": "material-icon-theme",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+
+
+    //
+    //----------------- Theme ------------------------
+    //
+    "workbench.colorTheme": "Catppuccin Mocha",
+
+    //
+    //----------------- Custom Color ------------------------
+    //
+    "workbench.colorCustomizations": {
+      // "[Catppuccin Mocha]": {
+      //   "foreground": "#CBE3E7",
+      //   "editor.background": "#1E1C31",
+      //   "editorLineNumber.activeForeground": "#91DDFF",
+      //   "editorLineNumber.foreground": "#585273",
+      //   "editor.lineHighlightBackground": "#100E23",
+      //   "editor.selectionBackground": "#5852739b"
+      // }
+    },
+    "editor.tokenColorCustomizations": {
+      // "[Catppuccin Mocha]": {
+      //   "strings": "#FFE6B3",
+      //   "numbers": "#F2B482",
+      //   "comments": "#8A889D",
+      //   "textMateRules": [
+      //     {
+      //       "scope": [
+      //         "variable.other",
+      //         "entity.name.type",
+      //         "storage"
+      //       ],
+      //       "settings": {
+      //         "foreground": "#D4BFFF"
+      //       }
+      //     },
+      //     {
+      //       "scope": [
+      //         "keyword",
+      //         "keyword.import.go",
+      //         "keyword.control"
+      //       ],
+      //       "settings": {
+      //         "foreground": "#A1EFD3"
+      //       }
+      //     },
+      //     {
+      //       "scope": [
+      //         "keyword.operator"
+      //       ],
+      //       "settings": {
+      //         "foreground": "#63F2F1"
+      //       }
+      //     },
+      //     {
+      //       "scope": [
+      //         "punctuation.definition.string.begin",
+      //         "punctuation.definition.string.end"
+      //       ],
+      //       "settings": {
+      //         "foreground": "#FFE6B3"
+      //       }
+      //     },
+      //     {
+      //       "scope": [
+      //         "entity.name.function"
+      //       ],
+      //       "settings": {
+      //         "foreground": "#F48FB1"
+      //       }
+      //     },
+      //     {
+      //       "scope": [
+      //         "support.function",
+      //         "keyword.operator.address.go"
+      //       ],
+      //       "settings": {
+      //         "foreground": "#91DDFF"
+      //       }
+      //     },
+      //     {
+      //       "scope": [
+      //         "support.type.property-name.json.comments",
+      //         "support.type.property-name.json punctuation"
+      //       ],
+      //       "settings": {
+      //         "foreground": "#78A8FF"
+      //       }
+      //     },
+      //   ]
+      // }
+    },
+
+    //
+    //-----------------Theme Catppuccin-------------------------
+    //
+    "catppuccin.colorOverrides": {
+      "mocha": {
+        "rosewater": "#F5E0DC",
+        // "rosewater": "#ffffff",
+        // "flamingo": "#F2CDCD",
+        "flamingo": "#F48FB1",
+        // "mauve": "#DDB6F2",
+        "mauve": "#D4BFFF",
+        "pink": "#F5C2E7",
+        // "red": "#F28FAD",
+        "red": "#F48FB1",
+        // "maroon": "#E8A2AF",
+        "maroon": "#E8A2AF",
+        // "peach": "#F8BD96",
+        "peach": "#F2B482",
+        // "yellow": "#FAE3B0",
+        "yellow": "#FFE6B3",
+        // "green": "#ABE9B3",
+        "green": "#A1EFD3",
+        // "blue": "#96CDFB",
+        "blue": "#91DDFF",
+        // "sky": "#89DCEB",
+        "sky": "#ABF8F7",
+        // "teal": "#B5E8E0",
+        "teal": "#7FE9C3",
+        "lavender": "#C9CBFF",
+        // "lavender": "#78A8FF",
+
+        // "text": "#D9E0EE",
+        "text": "#CBE3E7",
+        "subtext1": "#BAC2DE",
+        "subtext0": "#A6ADC8",
+
+        "overlay2": "#C3BAC6",
+        // "overlay1": "#988BA2",
+        "overlay1": "#3E3859",
+        // "overlay0": "#6E6C7E",
+        "overlay0": "#8A889D",
+
+        // "surface2": "#6E6C7E",
+        "surface2": "#6E6C7E",  // default
+        // "surface1": "#575268",
+        "surface1": "#585273",
+        // "surface0": "#302D41",
+        "surface0": "#3E3859",
+
+        // "base": "#1E1E2E",
+        "base": "#1E1C31",
+        // "mantle": "#1A1826",
+        "mantle": "#1E1C31",
+        // "crust": "#161320",
+        "crust": "#100E23",
+      },
+    },
+    "catppuccin.customUIColors": {
+      "mocha": {
+        "ediitorCursor.background": "yellow",
+        "editor.selectionBackground": "surface0 0.9",
+        "editor.selectionHighlightBackground": "peach 0.3",
+        "editor.wordHighlightBackground": "peach 0.3",
+        "editor.lineHighlightBackground": "crust",
+        "editorIndentGuide.activeBackground": "lavender",
+
+        "editorSuggestWidget.border": "blue",
+      }
+    },
+    "catppuccin.bracketMode": "neovim",
+    "catppuccin.accentColor":  "blue",
+
+    "code-runner.enableAppInsights": false,
+    "telemetry.telemetryLevel": "off",
+
+    //
+    //-----------------Indent Rainbow-------------------------
+    //
+    // Defining custom colors instead of default "Rainbow" for dark backgrounds.
+    // (Sorry: Changing them needs an editor restart for now!)
+    // "indentRainbow.colors": [
+    //     "rgba(255,255,64,0.07)",
+    //     "rgba(127,255,127,0.07)",
+    //     "rgba(255,127,255,0.07)",
+    //     "rgba(79,236,236,0.07)"
+    // ],
+    // The indent color if the number of spaces is not a multiple of "tabSize".
+    // "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
+    // The indent color when there is a mix between spaces and tabs.
+    // To be disabled this coloring set this to an empty string.
+}

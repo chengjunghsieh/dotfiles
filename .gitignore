@@ -1,0 +1,67 @@
+# all ignore #
+/*
+/.**
+
+## config
+!/.config/
+!/.config/**
+
+### Secrets
+/.config/TabNine/registration_key
+/.config/espanso/user/**
+/.config/systemd/**/*kite*
+/.config/gh/**
+!/.config/gh/config.yml
+!/.config/pet/snippet.toml
+
+### neovim
+/.config/nvim/plugin/**
+!/.nvim/
+!/.nvim/**
+
+### iterm2
+/.config/iterm2/AppSupport
+
+### zsh
+!/.zshenv
+/.zfunc/**
+/.config/zsh/*.local/**
+/.config/zsh/.zsh_history
+/.config/zsh/.zcompdump*
+/.config/zsh/.zshrc.local
+/.config/zsh/.zim
+
+### VSCode
+/.config/Code/**
+!/.config/Code/User/*.json
+
+## ci
+!/.circleci/
+!/.circleci/**
+!/.github/
+!/.github/**
+
+## lua
+!/.luacheckrc
+!/.stylua.toml
+
+## doc
+/.nvim/vale/styles/**
+!/.nvim/vale/styles/Vocab/
+!/.nvim/vale/styles/Vocab/**
+!/.textlintrc.json
+!/.cspell.json
+
+# global #
+__pycache__
+!/docs/
+!/docs/**
+!/_config.yml
+!/README.md
+!/LICENSE
+!/install.sh
+!/install-scripts/
+!/install-scripts/**
+!.linkignore
+!.gitignore
+!.gitkeep

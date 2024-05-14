@@ -1,0 +1,212 @@
+# format = """
+# $username\
+# $hostname\
+# $shlvl\
+# $directory\
+# $git_branch\
+# $git_commit\
+# $git_state\
+# $git_status\
+# $docker_context\
+# $cmake\
+# $elixir\
+# $python\
+# $ruby\
+# $swift\
+# $line_break\
+# $status\
+# $character"""
+
+# right_format = """$time"""
+
+
+## https://twitter.com/starshipprompt/status/1440380145861226496
+# two line prompt
+format = """
+$all\
+$fill\
+$time\
+$line_break\
+$character
+"""
+
+[fill]
+symbol = " "
+
+[time]
+disabled = false
+style = "bold 104" 
+format = "[$time]($style)"
+
+
+#### one line prompt
+# right_format = "$time"
+
+# [time]
+# disabled = false
+# style = "bold bright-black"
+# format = "[$time]($style)"
+
+# [line_break]
+# disabled = true
+
+## FIRST LINE/ROW: Info & Status
+# First param ─┌
+# [username]
+# format = " [╭─$user]($style)@"
+# style_user = "bold red"
+# style_root = "bold red"
+# show_always = true
+
+# # Second param
+# [hostname]
+# format = "[$hostname]($style) in "
+# style = "bold dimmed red"
+# trim_at = "-"
+# ssh_only = false
+# disabled = false
+
+# Third param
+[directory]
+# style = "purple"
+truncation_length = 5
+truncate_to_repo = true
+# truncation_symbol = "repo: "
+fish_style_pwd_dir_length = 1
+format = "[$read_only]($read_only_style)[$path]($style) "
+style = "bold fg:6"
+# read_only = "􀎡 "
+read_only_style = "fg:magenta"
+truncation_symbol = "…/"
+
+[git_commit]
+tag_symbol = "\uf02b "
+tag_disabled = false
+
+# Before all the version info (python, nodejs, php, etc.)
+[git_status]
+style = "bold fg:yellow"
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+deleted = "x"
+
+# Last param in the first line/row
+[cmd_duration]
+min_time = 60000
+format = "took [$duration]($style)"
+disabled = false
+
+
+## SECOND LINE/ROW: Prompt
+# Somethere at the beginning
+[battery]
+full_symbol = " "
+charging_symbol = " "
+discharging_symbol = " "
+disabled = true
+
+[[battery.display]]  # "bold red" style when capacity is between 0% and 10%
+threshold = 15
+style = "bold red"
+disabled = true
+
+[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
+threshold = 50
+style = "bold yellow"
+disabled = true
+
+[[battery.display]]  # "bold green" style when capacity is between 10% and 30%
+threshold = 80
+style = "bold green"
+disabled = true
+
+# Prompt: optional param 1
+# [time]
+# format = " 🕙 $time($style)"
+# time_format = "%T"
+# style = "bright-white"
+# style = "bg:#33658A"
+# format = '[[ $time ](bg:#33658A)]($style)'
+# disabled = false
+
+# Prompt: param 2 └─
+[character]
+# success_symbol = " [╰─λ](bold red)"
+# success_symbol = "[λ](bold fg:#999999)"
+# error_symbol = "[×](bold fg:#AC1B2E)"
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+
+# SYMBOLS
+[status]
+#symbol = "🔴"
+#symbol = "" 
+format = '[\[$symbol$status_common_meaning$status_signal_name$status_maybe_int$status\]]($style)'
+# map_symbol = true
+disabled = false
+
+[aws]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+symbol = " "
+# style = "bold"
+
+[golang]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+pyenv_version_name = true
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[swift]
+symbol = "ﯣ "

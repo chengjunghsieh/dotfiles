@@ -1,0 +1,105 @@
+##################
+# Personal Details
+##################
+[user]
+  name =
+  email =
+
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+[add.interactive]
+    useBuiltin = false # required for git 2.37.0
+
+[delta]
+    #syntax-theme = Visual Studio Dark+
+    syntax-theme = TwoDark
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+    side-by-side = true
+    minus-style = strike red
+    minus-non-emph-style = strike red
+    minus-emph-style = bold red 52
+    minus-empty-line-marker-style = normal "#3f0001"
+    plus-style = green
+    plus-non-emph-style = green
+    plus-emph-style = bold green 22
+    plus-empty-line-marker-style = normal "#002800"
+    line-numbers = true
+    line-numbers-minus-style = red
+    line-numbers-plus-style = green
+    line-numbers-left-style = "#444444"
+    line-numbers-right-style = "#444444"
+
+##################
+# General Settings
+##################
+[core]
+  editor = nvim
+  # Make `git rebase` safer on OS X
+  # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+  trustctime = false
+
+[color]
+  ui = auto
+
+[status]
+  showUntrackedFiles = all
+
+[commit]
+  verbose = true
+
+[push]
+  default = current
+
+[fetch]
+  # Prune dead branches on fetch
+  prune = true
+
+[rebase]
+  autostash = true
+
+[pull]
+  rebase = true
+  ff = only
+
+[diff]
+  noprefix = true
+  renames = true
+  colorMoved = default
+  colorMoved = default
+
+[merge]
+  tool = nvimdiff
+  conflictstyle = diff3
+
+[mergetool]
+  keepBackup = false
+
+# [mergetool "nvimdiff"]
+#   cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+# [grep]
+#   lineNumber = true
+#   patternType = extended
+
+#[url "git@github.com:"]
+#	insteadOf = https://github.com/
+
+[init]
+  defaultBranch = main
+
+[alias]
+  co = checkout
+  ci = commit
+  br = branch
+  st = status
+  l = log --oneline --graph
+  ls = log --oneline --graph --pretty=format:\"%h <%an> %ar %s\"
+  hist = log --pretty=format:'%C(yellow)[%ai]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red)%C(cyan)%an%C(reset) %C(blue)%d%C(reset)' --graph --date=short
+  lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+  lg = !"git lg1"
